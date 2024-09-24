@@ -23,7 +23,6 @@ public interface Message {
     String ALL_FIELDS_ARE_MANDATORY = "Tutti i campi sono obbligatori!";
     String EDIT_USER_NOT_EMPTY_FIELD = "I campi nome e cognome non possono essere vuoti!";
     String ONLY_LETTERS_PROFESSOR_FIELD = "Il campo professore può contenere solo lettere!";
-    String ONLY_LETTERS_UNIVERSITY_FIELD = "Il campo università può contenere solo lettere!";
     String ONLY_LETTERS_SIGNUP_FIELD = "I campi nome, cognome e università possono contenere solo lettere!";
     String ONLY_LETTERS_EDIT_USER_FIELD = "I campi nome, cognome, dipartimento e corso di studi possono contenere solo lettere!";
     String PAID_DATE_FIELDS_MANDATORY = "Il campo data pagamento è obbligatorio se la tassa è stata pagata!";

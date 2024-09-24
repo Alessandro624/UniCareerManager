@@ -5,7 +5,6 @@ import it.unical.demacs.informatica.unicareermanager.costants.Message;
 import it.unical.demacs.informatica.unicareermanager.costants.Settings;
 import it.unical.demacs.informatica.unicareermanager.costants.Title;
 import it.unical.demacs.informatica.unicareermanager.model.DBConnection;
-import it.unical.demacs.informatica.unicareermanager.model.StudentSettingsProperties;
 import it.unical.demacs.informatica.unicareermanager.model.ThemeModel;
 import it.unical.demacs.informatica.unicareermanager.util.ExecutorServiceManager;
 import javafx.event.EventHandler;
