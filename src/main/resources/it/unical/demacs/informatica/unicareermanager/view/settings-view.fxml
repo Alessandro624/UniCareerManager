@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unical.demacs.informatica.unicareermanager.controller.SettingsController">
+    <children>
+        <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0">
+            <children>
+                <Label fx:id="settingsLabel" text="IMPOSTAZIONI" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <VBox maxHeight="175.0" maxWidth="1.7976931348623157E308" spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Preferenze utente"/>
+                        <Separator prefWidth="200.0"/>
+                        <HBox alignment="CENTER_LEFT" maxHeight="75.0" minHeight="50.0" prefHeight="50.0" spacing="30.0"
+                              VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label prefWidth="150.0" text="Crediti totali"/>
+                                <TextField fx:id="maxCreditsTextField" prefHeight="30.0" prefWidth="200.0"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="75.0" minHeight="50.0" prefHeight="50.0" spacing="30.0"
+                              VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label prefWidth="150.0" text="Valore lode"/>
+                                <Spinner fx:id="gradeValueSpinner" prefHeight="30.0" prefWidth="200.0"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0"/>
+                    </VBox.margin>
+                </VBox>
+                <VBox layoutX="30.0" layoutY="57.0" maxHeight="175.0" maxWidth="1.7976931348623157E308" spacing="10.0"
+                      VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Preferenze grafiche"/>
+                        <Separator prefWidth="200.0"/>
+                        <HBox alignment="CENTER_LEFT" maxHeight="75.0" minHeight="50.0" prefHeight="50.0" spacing="30.0"
+                              VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label prefWidth="150.0" text="Formato valuta"/>
+                                <ComboBox fx:id="currencyComboBox" prefHeight="30.0" prefWidth="200.0"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="75.0" minHeight="50.0" prefHeight="50.0" spacing="30.0"
+                              VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label prefWidth="150.0" text="Tema predefinito"/>
+                                <ChoiceBox fx:id="themeChoiceBox" prefHeight="30.0" prefWidth="200.0"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0"/>
+                    </VBox.margin>
+                </VBox>
+                <Label fx:id="errorLabel">
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0"/>
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER" maxHeight="50.0" minHeight="50.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="20.0" right="135.0"/>
+                    </VBox.margin>
+                    <children>
+                        <ProgressIndicator fx:id="progressIndicator" maxHeight="40.0" progress="0.0" visible="false"/>
+                        <Button fx:id="saveChangeButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false"
+                                onAction="#handleSave" text="Salva modifiche" HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="deleteChangeButton" layoutX="264.0" layoutY="20.0" maxHeight="30.0"
+                                minHeight="30.0" mnemonicParsing="false" onAction="#handleDelete"
+                                text="Elimina modifiche"/>
+                        <Button fx:id="restoreDefaultButton" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false"
+                                onAction="#handleRestoreDefault" text="Ripristina predefinite" HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

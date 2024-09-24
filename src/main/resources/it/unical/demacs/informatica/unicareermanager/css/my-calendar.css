@@ -1,0 +1,304 @@
+* {
+    -style1-color: primarySideColor !important;
+    -style2-color: darkgreen !important;
+    -style3-color: primarySelectionColor !important;
+    -style4-color: errorColor !important;
+}
+
+.calendar * {
+    -fx-font-family: 'Roboto';
+    -fx-text-background-color: textColor !important;
+    -weekend-fill-color: secondaryBackgroundColor !important;
+    -today-fill-color: errorColor !important;
+    -today-stroke-color: errorColor !important;
+}
+
+.calendar .calendar-page > .container > .header * {
+    -fx-fill: textColor;
+}
+
+.calendar #toolbar {
+    -fx-border-color: textColor;
+}
+
+.calendar #switcher * {
+    -fx-spacing: 10px;
+    -fx-min-height:30px;
+}
+
+.calendar #search-field {
+    -fx-min-height: 30px;
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.calendar #search-field .clear-button > .graphic{
+    -fx-background-color: imagesColor;
+}
+
+.calendar #search-icon {
+    -fx-icon-color: imagesColor;
+}
+
+.calendar .year-month-view > .container > .selected-month-date {
+    -fx-background-color: secondaryBackgroundColor !important;
+    -fx-text-fill: textColor !important;
+}
+
+.calendar .date-popover > .content > .entries-pane > .entry > .time {
+    -fx-text-fill: textColor;
+}
+
+.calendar .all-day-view > .container > .day-region {
+    -fx-border-color: transparent transparent textColor transparent;
+}
+
+.calendar .all-day-view > .container > .weekend {
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.calendar .weekday-header-view > .container > .cell {
+    -fx-border-color: transparent transparent textColor transparent;
+}
+
+.calendar .weekday-view.weekend-day,
+.calendar .day-view.weekend-day{
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.calendar .time-scale > .time-label{
+    -fx-text-fill: textColor;
+}
+
+.calendar .agenda-view > .container > .list-view > .placeholder-label {
+    -fx-text-fill: textColor;
+    -fx-font-size: 2.5em;
+}
+
+.calendar .agenda-view > .container {
+    -fx-padding: 0.0;
+}
+
+.calendar .agenda-view > .container > .list-view {
+    -fx-background-color: transparent;
+}
+
+.calendar .agenda-view > .container > .status-label {
+    -fx-text-fill: textColor;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}
+
+.calendar .agenda-view > .container > .list-view > .virtual-flow > .scroll-bar:vertical {
+    -fx-pref-width: 13px;
+}
+
+.calendar .agenda-view > .container > .list-view > .virtual-flow > .scroll-bar:vertical .decrement-arrow,
+.calendar .agenda-view > .container > .list-view > .virtual-flow > .scroll-bar:vertical .increment-arrow {
+    -fx-pref-width: 10px;
+}
+
+.calendar .agenda-view-list-cell {
+    -fx-background-color: transparent;
+}
+
+.calendar .agenda-view-list-cell > .container > .header {
+    -fx-border-color: transparent transparent textColor transparent;
+    -fx-border-width: 3.0;
+    -fx-border-insets: 0.0 0.0 4.0 0.0;
+}
+
+.calendar .agenda-view-list-cell > .container > .header.today {
+    -fx-border-color: transparent transparent -today-fill-color transparent;
+}
+
+.calendar .agenda-view-list-cell > .container > .header > .date-label,
+.calendar .agenda-view-list-cell > .container > .header > .weekday-label {
+    -fx-padding: 0.0 0.0 4.0 0.0;
+    -fx-font-size: 0.8em;
+    -fx-font-weight: bold;
+    -fx-text-fill: textColor;
+}
+
+.calendar .agenda-view-list-cell > .container > .header > .today,
+.calendar .agenda-view-list-cell > .container > .header > .today {
+    -fx-text-fill: -today-fill-color;
+}
+
+.calendar .agenda-view-list-cell > .container > .body {
+    -fx-padding: 0.0 0.0 20.0 0.0;
+    -fx-vgap: 5.0px;
+    -fx-hgap: 8.0px;
+}
+
+.calendar .agenda-view-list-cell > .container > .body > .title-label {
+    -fx-padding: 4.0 4.0 4.0 0.0;
+    -fx-text-fill: textColor;
+    -fx-font-weight: bold;
+}
+
+.calendar .agenda-view-list-cell > .container > .body > .time-label {
+    -fx-text-fill: textColor;
+}
+
+.calendar .agenda-view-list-cell > .container > .body > .separator {
+    -fx-pref-height: 1.0;
+    -fx-border-color: textColor;
+    -fx-border-style: dashed none none none;
+}
+
+.calendar .search-result-cell * {
+    -fx-background-color: transparent;
+}
+
+.calendar .search-result-cell:selected {
+    -fx-background-color: primarySelectionColor;
+}
+
+.calendar .search-result-cell:filled:focused:selected {
+    -fx-background-color: primarySelectionColor;
+}
+
+.calendar .search-result-view > .list-view > .placeholder-label {
+    -fx-text-fill: textColor;
+}
+
+.calendar .search-result-cell > .container > .title-label {
+    -fx-text-fill: textColor;
+}
+
+.calendar .search-result-cell > .container > .date-time-pane > .date-label,
+.calendar .search-result-cell > .container > .date-time-pane > .time-label {
+    -fx-text-fill: textColor;
+}
+
+
+.calendar .default-style-entry:selected .default-style-entry-time-label,
+.calendar .default-style-entry:selected .default-style-entry-title-label{
+    -fx-text-fill: textColor;
+}
+
+.calendar .default-style-entry .default-style-entry-time-label,
+.calendar .default-style-entry .default-style-entry-title-label {
+    -fx-text-fill: textColor;
+    -fx-background-color:transparent;
+}
+
+.calendar .default-style-entry-small:selected > .default-style-entry-small-title-label,
+.calendar .default-style-entry-small:selected > .default-style-entry-small-time-label{
+    -fx-text-fill: textColor;
+}
+
+.calendar .default-style-entry-small > .default-style-entry-small-title-label,
+.calendar .default-style-entry-small > .default-style-entry-small-time-label{
+    -fx-background-color:transparent;
+    -fx-text-fill: textColor;
+}
+
+.calendar .default-style-entry-small:selected > * > .default-style-icon,
+.calendar .default-style-entry-small:selected > * > .default-style-icon-small {
+    -fx-stroke: textColor;
+    -fx-fill: textColor;
+}
+
+.calendar .default-style-calendar-header {
+    -fx-text-fill: textColor;
+}
+
+.calendar .recurrence-popup {
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.calendar .detailed-week-view > .container > .all-day-label {
+    -fx-text-fill: textColor;
+    -fx-border-color: primarySideColor;
+}
+
+.calendar .detailed-day-view > .container > .all-day-label {
+    -fx-text-fill: textColor;
+    -fx-border-color: primarySideColor;
+}
+
+.calendar .detailed-week-view > .container > .filler-right,
+.calendar .detailed-week-view > .container > .filler-left {
+    -fx-border-color: transparent;
+}
+
+.detailed-week-view > .container > .all-day-filler {
+    -fx-border-color: transparent;
+}
+
+.calendar .button-bar > .container > .button {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.calendar .button-bar > .container > .button:focused,
+.calendar .button-bar > .container > .button:hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.calendar .popover-header {
+    -fx-border-color: transparent transparent textColor transparent;
+}
+
+.calendar .default-style-entry-popover-title {
+    -fx-text-fill: textColor !important;
+}
+
+.calendar .popover-header > .title * {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.calendar .popover-header > .location *{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.calendar .popover-accordion > .titled-pane > .content {
+    -fx-background-color: transparent;
+}
+
+.calendar .popover-accordion > .titled-pane {
+    -fx-text-fill: textColor;
+}
+
+.calendar .recurrence-view > .container > .weekday-box > .toggle-button {
+    -fx-background-radius: 5px;
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.calendar .recurrence-view > .container > .weekday-box > .toggle-button:hover,
+.calendar .recurrence-view > .container > .weekday-box > .toggle-button:selected {
+    -fx-background-color: primarySelectionColor;
+}
+
+.calendar .recurrence-view > .container > .weekday-box > .toggle-button:focused {
+    -fx-border-color: primarySelectionColor;
+}
+
+.calendar .week-view .weekday-separator,
+.calendar .weekday-header-view .weekday-separator,
+.calendar .all-day-view .weekday-separator {
+    -size: 1px;
+    -fx-pref-width: -size;
+    -fx-min-width: -size;
+    -fx-max-width: -size;
+    -fx-background-color: textColor;
+}
+
+.calendar .day-view > .half-hour-line {
+    -fx-stroke: derive(secondaryBackgroundColor, -40%);
+}
+
+.calendar .day-view > .full-hour-line {
+    -fx-stroke: derive(secondaryBackgroundColor, -70%);
+}
+
+.calendar .day-view > .midnight-line {
+    -fx-stroke: textColor;
+}
+
+.calendar .day-view > .early-hours-region,
+.calendar .day-view > .late-hours-region {
+    -fx-background-color: secondaryBackgroundColor;
+}

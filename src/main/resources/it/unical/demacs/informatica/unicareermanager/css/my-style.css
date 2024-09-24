@@ -1,0 +1,489 @@
+* {
+    -fx-text-fill: textColor;
+    -fx-background-color: primaryBackgroundColor;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.transparent-node {
+    -fx-background-color: transparent;
+}
+
+.side-pane {
+    -fx-background-color: linear-gradient(from 50% 50% to 100% 100%, primarySideColor, secondarySideColor);
+}
+
+.label {
+    -fx-background-color: transparent;
+}
+
+.welcome-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-text-fill: textColor;
+    -fx-border-width: 3px;
+    -fx-border-color:  transparent transparent textColor transparent;
+}
+
+.bold-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: textColor;
+    -fx-fill: textColor;
+}
+
+.error-label {
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: errorColor;
+}
+
+.text-field * {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.button {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.button: hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.button: focused {
+    -fx-background-color: primarySelectionColor;
+}
+
+.toggle-button {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.toggle-button: hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.toggle-button: focused {
+    -fx-background-color: primarySelectionColor;
+}
+
+.menu-button {
+    -fx-font-size: 14px;
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.menu-button > *{
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.menu-button .arrow {
+    -fx-background-color: textColor;
+}
+
+.menu-button:selected: hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.menu-button:selected: focused {
+    -fx-background-color: primarySelectionColor;
+}
+
+.check-box .box {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.check-box: selected .mark {
+    -fx-background-color: textColor;
+}
+
+.check-box: focused .box {
+    -fx-border-color: primarySelectionColor;
+}
+
+.check-box: selected .box {
+    -fx-background-color: primarySelectionColor;
+}
+
+.combo-box *{
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.combo-box-popup .list-cell{
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.combo-box-popup .list-cell:filled:hover,
+.combo-box-popup .list-cell:filled:focused {
+    -fx-background-color: primarySelectionColor;
+}
+
+.combo-box-base:focused .arrow-button,
+.combo-box-base:hover .arrow-button{
+    -fx-background-color: primarySelectionColor;
+}
+
+.combo-box-base .arrow-button .arrow{
+    -fx-background-color: textColor;
+}
+
+.choice-box * {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.choice-box:focused {
+    -fx-border-color: primarySelectionColor;
+}
+
+.choice-box .arrow {
+    -fx-background-color: textColor;
+}
+
+.contex-menu * {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.menu-item *{
+    -fx-background-color: transparent;
+}
+
+.menu-item .radio {
+    -fx-background-color: textColor;
+}
+
+.menu-item:hover,
+.menu-item:focused,
+.menu-item:hover .label,
+.menu-item:focused .label {
+    -fx-background-color: primarySelectionColor;
+}
+
+.slider .track,
+.slider .thumb {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.radio-button .radio {
+    -fx-border-radius: 20px;
+    -fx-border-color: textColor;
+}
+
+.radio-button:selected .radio .dot {
+    -fx-background-color: primarySelectionColor;
+    -fx-background-insets: 0;
+}
+
+.side-bar-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+}
+
+.icons-color {
+    -fx-icon-color: imagesColor;
+}
+
+.separator .line {
+    -fx-background-color : lineColor;
+    -fx-border-color : lineColor;
+    -fx-border-width: 1px;
+}
+
+.table-view * {
+    -fx-background-color: primaryBackgroundColor;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background * {
+    -fx-background-color: linear-gradient(to bottom, primarySideColor, secondarySideColor);
+}
+
+.table-view .table-cell {
+    -fx-border-color: textColor;
+    -fx-border-width: 0 1 0 0;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 0 0 10;
+}
+
+.table-view .column-header {
+    -fx-border-color: textColor;
+    -fx-border-width: 0 1 0 0;
+}
+
+.table-view .column-header .arrow {
+    -fx-background-color: textColor;
+}
+
+.table-row-cell * {
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.table-row-cell:odd *{
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.table-row-cell:odd *> .button:hover{
+    -fx-background-color: primarySelectionColor;
+}
+
+.table-row-cell:odd *> .button:focused {
+    -fx-background-color: primarySelectionColor;
+}
+
+.table-row-cell:selected * {
+    -fx-background-color: separatorColor;
+    -fx-text-fill: selectedTextColor;
+}
+
+.table-row-cell:selected *> .button:hover {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.table-row-cell:selected *> .button:focused {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.scroll-bar:vertical > .increment-button > .increment-arrow,
+.scroll-bar:vertical > .decrement-button > .decrement-arrow,
+.scroll-bar:horizontal > .increment-button > .increment-arrow,
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow{
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 10, 0.5, 0, 0);
+}
+
+.scroll-bar:vertical,
+.scroll-bar:vertical .track,
+.scroll-bar:vertical .track-background,
+.scroll-bar:horizontal,
+.scroll-bar:horizontal .track,
+.scroll-bar:horizontal .track-background {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.scroll-bar:vertical,
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 2;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: textColor;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab * {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.tab .tab-label {
+ 	-fx-alignment: CENTER;
+	-fx-text-fill: textColor;
+	-fx-font-weight: bold;
+}
+
+.tab {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.tab-pane .tab: selected {
+    -fx-background-color: primarySelectionColor;
+}
+
+.tab-down-button {
+    -fx-padding: 0;
+}
+
+.tab-down-button .arrow {
+    -fx-padding: 0;
+}
+
+.date-picker .arrow-button {
+	-fx-background-color: secondaryBackgroundColor;
+}
+
+.date-picker:hover > .arrow-button {
+	-fx-background-color: primarySelectionColor;
+}
+
+.date-picker:focused > .arrow-button {
+	-fx-background-color: primarySelectionColor;
+}
+
+.date-picker .arrow-button .arrow {
+	-fx-background-color: textColor;
+}
+
+.date-picker .cell {
+	-fx-background-color: primaryBackgroundColor;
+}
+
+.date-picker .cell: hover {
+	-fx-background-color: secondaryBackgroundColor;
+}
+
+.date-picker .cell: focused {
+	-fx-background-color: secondaryBackgroundColor;
+}
+
+.date-picker .selected {
+	-fx-background-color: secondaryBackgroundColor;
+	-fx-text-fill: textColor;
+}
+
+.date-picker .selected: focused {
+	-fx-background-color: secondaryBackgroundColor;
+	-fx-text-fill: textColor;
+}
+
+.date-picker-popup  * {
+	-fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+	-fx-background-color: primarySideColor;
+}
+
+.date-picker-popup .month-year-pane .label {
+	-fx-text-fill: textColor;
+}
+
+.date-picker-popup .week-number-cell {
+	-fx-text-fill: secondarySideColor;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: textColor;
+}
+
+.progress-indicator {
+    -fx-progress-color: derive(secondarySideColor, +40%);
+}
+
+.progress-bar .bar {
+    -fx-background-color: derive(secondarySideColor, +40%);
+}
+
+.progress-indicator .percentage {
+    -fx-fill: null;
+}
+
+.progress-indicator .indicator{
+    -fx-border-color: textColor;
+}
+
+.axis {
+    -fx-tick-label-fill: textColor;
+}
+
+.axis:bottom {
+    -fx-border-color: textColor transparent transparent transparent;
+}
+
+.axis:left {
+    -fx-border-color: transparent textColor transparent transparent;
+}
+
+.axis-tick-mark {
+    -fx-stroke: textColor;
+}
+
+.axis-minor-tick-mark {
+    -fx-stroke: textColor;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 3px;
+    -fx-stroke: derive(secondarySideColor, +40%);
+}
+
+.chart-line-symbol {
+    -fx-background-color: derive(secondarySideColor, -10%);
+}
+
+.chart-bar {
+    -fx-background-color: derive(secondarySideColor, +40%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: secondaryBackgroundColor;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: secondaryBackgroundColor;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: textColor;
+    -fx-fill: textColor;
+}
+
+.chart-pie-label {
+    -fx-fill: textColor;
+}
+
+.chart-legend {
+   -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: textColor;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.list-cell:odd *{
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.list-cell:even *{
+    -fx-background-color: primaryBackgroundColor;
+}
+
+.list-cell *> .button:hover,
+.list-cell *> .button:focused{
+    -fx-background-color: primarySelectionColor;
+}
+
+.list-view .list-cell:selected {
+    -fx-border-color: primarySelectionColor;
+}
+
+.color-palette .hyperlink,
+.color-palette .separator {
+    visibility: hidden;
+}
+
+.color-picker * {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: secondaryBackgroundColor;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: primarySelectionColor;
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+	-fx-background-color: textColor;
+}
+
+.information-cards {
+    -fx-border-color: textColor;
+    -fx-border-image-width: 2px;
+    -fx-effect:  dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.5, 0, 0);
+    -fx-background-color: secondaryBackgroundColor;
+}

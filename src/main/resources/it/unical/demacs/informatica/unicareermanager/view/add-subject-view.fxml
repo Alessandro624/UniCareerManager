@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0"
+            prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unical.demacs.informatica.unicareermanager.controller.AddSubjectController">
+    <children>
+        <VBox alignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0"
+              AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" text="Materia" HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="subjectNameTextField" maxWidth="200.0" minHeight="30.0" minWidth="200.0"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" text="Professore" HBox.hgrow="ALWAYS"/>
+                        <TextField fx:id="professorTextField" maxWidth="200.0" minHeight="30.0" minWidth="200.0"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" text="Colore" HBox.hgrow="ALWAYS"/>
+                        <ColorPicker fx:id="colorPicker" editable="true" maxWidth="200.0" minHeight="30.0"
+                                     minWidth="200.0" HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+                <Label fx:id="errorLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       textOverrun="CLIP" wrapText="true" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="addSubjectButton" minHeight="30.0" mnemonicParsing="false" onAction="#handleAddSubject"
+                        text="Aggiungi materia">
+                    <VBox.margin>
+                        <Insets bottom="10.0"/>
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

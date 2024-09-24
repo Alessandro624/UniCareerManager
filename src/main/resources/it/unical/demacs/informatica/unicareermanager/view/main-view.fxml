@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="rootPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unical.demacs.informatica.unicareermanager.controller.MainController">
+    <children>
+        <BorderPane prefHeight="550.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane fx:id="sideBarPane" prefWidth="165.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                   AnchorPane.topAnchor="0.0"/>
+                        <VBox fx:id="sideBarVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                              minHeight="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                              AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox maxHeight="120.0" maxWidth="1.7976931348623157E308" minHeight="80.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="menuButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleMenuBar" text="Menu"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="menuIcon" iconLiteral="mdi2m-menu" iconSize="25"
+                                                          text="󰍜"/>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                            <tooltip>
+                                                <Tooltip text="Menu"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Separator/>
+                                        <Button fx:id="homeButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToHome" text="Home"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="homeIcon" iconLiteral="mdi2h-home" iconSize="25"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Home"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Separator/>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="180.0" maxWidth="1.7976931348623157E308" minHeight="120.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="studentCardButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToStudentCard" text="Libretto"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="studentCardIcon"
+                                                          iconLiteral="mdi2b-book-education-outline" iconSize="25"/>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                            <tooltip>
+                                                <Tooltip text="Libretto"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Button fx:id="chartsButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToCharts" text="Grafici"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="chartsIcon" iconLiteral="mdi2c-chart-bar-stacked"
+                                                          iconSize="25"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Grafici"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Button fx:id="previsionButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToPrevision" text="Previsioni"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="previsionIcon" iconLiteral="mdi2b-book-search-outline"
+                                                          iconSize="25"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Previsioni"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Separator/>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="180.0" maxWidth="1.7976931348623157E308" minHeight="120.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="subjectButton" ellipsisString="" graphicTextGap="5.0"
+                                                layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308"
+                                                maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                                onAction="#handleToSubject" text="Materie" VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="subjectIcon"
+                                                          iconLiteral="mdi2b-book-open-page-variant-outline"
+                                                          iconSize="25"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Materie"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Button fx:id="agendaButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToAgenda" text="Agenda"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="agendaIcon" iconLiteral="mdi2c-calendar-month-outline"
+                                                          iconSize="25"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Orario lezioni"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Button fx:id="taxButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToTax" text="Tasse"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="taxIcon" iconLiteral="far-money-bill-alt"
+                                                          iconSize="20"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Tasse"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Separator/>
+                                    </children>
+                                </VBox>
+                                <VBox maxHeight="120.0" maxWidth="1.7976931348623157E308" minHeight="80.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="settingsButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToSettings" text="Impostazioni"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="settingsIcon" iconLiteral="fas-tools" iconSize="20"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Impostazioni"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Button fx:id="accountButton" ellipsisString="" graphicTextGap="5.0"
+                                                maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                                mnemonicParsing="false" onAction="#handleToAccount" text="Studente"
+                                                VBox.vgrow="ALWAYS">
+                                            <graphic>
+                                                <FontIcon fx:id="accountIcon" iconLiteral="fas-user-graduate"
+                                                          iconSize="20"/>
+                                            </graphic>
+                                            <tooltip>
+                                                <Tooltip text="Studente"/>
+                                            </tooltip>
+                                        </Button>
+                                        <Separator/>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane fx:id="centerPane" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fx:id="utilityButtonBox" alignment="CENTER" spacing="20.0" AnchorPane.rightAnchor="15.0"
+                              AnchorPane.topAnchor="15.0">
+                            <children>
+                                <Button fx:id="helpButton" mnemonicParsing="false" onAction="#handleHelp"
+                                        prefHeight="30.0" text="Aiuto"/>
+                                <Button fx:id="changeThemeButton" mnemonicParsing="false" onAction="#handleChangeTheme"
+                                        prefHeight="30.0" text="Cambia Tema"/>
+                            </children>
+                        </HBox>
+                        <StackPane fx:id="stackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+        <BorderPane fx:id="progressIndicatorPane" visible="false" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <ProgressIndicator fx:id="progressIndicator" progress="0.0" BorderPane.alignment="CENTER"/>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+/*complementari divisi*/
+* {
+  primaryBackgroundColor: #cccaca;
+  secondaryBackgroundColor: e6e3e4;
+  primarySideColor: #4d6aeb;
+  secondarySideColor: #4996de;
+  primarySelectionColor: #eb7f4d;
+  imagesColor: black;
+  textColor: black;
+  selectedTextColor: black;
+  lineColor: #b9eb4d;
+  separatorColor: #eb7f4d;
+  errorColor: #ab3428;
+}

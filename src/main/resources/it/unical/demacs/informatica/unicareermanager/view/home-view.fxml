@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unical.demacs.informatica.unicareermanager.controller.HomeController">
+    <children>
+        <VBox layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+              spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0">
+            <children>
+                <Label fx:id="homeLabel" text="HOME" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="welcomeLabel" contentDisplay="BOTTOM" maxWidth="1.7976931348623157E308"
+                       text="Benvenuto/a " VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER_LEFT" spacing="20.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox fx:id="agendaBox" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                        <VBox fx:id="cardsVBox" alignment="CENTER" maxHeight="1.7976931348623157E308"
+                              maxWidth="1.7976931348623157E308" spacing="30.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="studentStatisticsLabel" text="Statistiche studente"/>
+                                <HBox alignment="CENTER" maxHeight="120.0" minHeight="100.0" spacing="30.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <children>
+                                                <Text fx:id="avgLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Media attuale"/>
+                                                <Text fx:id="avgValueLabel" layoutX="67.0" layoutY="104.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <children>
+                                                <Text fx:id="pAvgLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Media ponderata attuale"/>
+                                                <Text fx:id="pAvgValueLabel" layoutX="41.0" layoutY="50.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" maxHeight="120.0" minHeight="100.0" spacing="30.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <children>
+                                                <Text fx:id="totalCreditsLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Crediti totali attuali"/>
+                                                <Text fx:id="totalCreditsValueLabel" strokeType="OUTSIDE"
+                                                      strokeWidth="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                            <children>
+                                                <Text fx:id="degreeGradeLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Proiezione voto di laurea"/>
+                                                <ProgressBar fx:id="degreeGradeProgressBar" maxHeight="20.0"
+                                                             maxWidth="250.0" minHeight="20.0" minWidth="200.0"
+                                                             progress="0.0" VBox.vgrow="ALWAYS"/>
+                                                <Text fx:id="degreeGradeValueLabel" layoutX="174.0" layoutY="34.0"
+                                                      strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" maxHeight="120.0" minHeight="100.0" spacing="30.0"
+                                      VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <children>
+                                                <Text fx:id="paidTaxesLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Tasse pagate"/>
+                                                <Text fx:id="paidTaxesValueLabel" strokeType="OUTSIDE"
+                                                      strokeWidth="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <VBox alignment="CENTER" spacing="10.0">
+                                            <children>
+                                                <Text fx:id="toPayTaxesLabel" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Tasse da pagare"/>
+                                                <Text fx:id="toPayTaxesValueLabel" strokeType="OUTSIDE"
+                                                      strokeWidth="0.0"/>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+                            </padding>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="20.0" top="10.0"/>
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

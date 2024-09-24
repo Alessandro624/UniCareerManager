@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="it.unical.demacs.informatica.unicareermanager.controller.ChartController">
+    <children>
+        <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+              AnchorPane.topAnchor="10.0">
+            <children>
+                <Label fx:id="chartsLabel" text="Grafici">
+                    <VBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <TabPane fx:id="tabPane" focusTraversable="false" maxHeight="1.7976931348623157E308"
+                         maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" tabMinHeight="35.0"
+                         VBox.vgrow="ALWAYS">
+                    <tabs>
+                        <Tab closable="false" text="MEDIA">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <LineChart fx:id="avgChart" AnchorPane.bottomAnchor="5.0"
+                                                   AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                                                   AnchorPane.topAnchor="5.0">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM"/>
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT"/>
+                                            </yAxis>
+                                        </LineChart>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="MEDIA PONDERATA">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <LineChart fx:id="pAvgChart" AnchorPane.bottomAnchor="5.0"
+                                                   AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                                                   AnchorPane.topAnchor="5.0">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM"/>
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT"/>
+                                            </yAxis>
+                                        </LineChart>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="ESAMI PER VOTO">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BarChart fx:id="examPerGradeChart" AnchorPane.bottomAnchor="5.0"
+                                                  AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                                                  AnchorPane.topAnchor="5.0">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM"/>
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT"/>
+                                            </yAxis>
+                                        </BarChart>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="CREDITI ACQUISITI">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <VBox alignment="CENTER" AnchorPane.bottomAnchor="10.0"
+                                              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                                              AnchorPane.topAnchor="20.0">
+                                            <children>
+                                                <ProgressIndicator fx:id="creditsProgressIndicator" maxHeight="500.0"
+                                                                   maxWidth="1.7976931348623157E308" progress="0.0"
+                                                                   VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets/>
+                                                    </VBox.margin>
+                                                </ProgressIndicator>
+                                                <Label fx:id="percentageLabel"/>
+                                                <Label fx:id="creditsLabel" alignment="CENTER" maxHeight="75.0"
+                                                       maxWidth="1.7976931348623157E308" text="Crediti acquisiti:"
+                                                       VBox.vgrow="ALWAYS"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab closable="false" text="PERCENTUALE VOTI">
+                            <content>
+                                <BorderPane>
+                                    <center>
+                                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308"
+                                              maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label fx:id="noExamLabel" alignment="CENTER"
+                                                       maxWidth="1.7976931348623157E308" text="Nessun esame inserito"
+                                                       VBox.vgrow="ALWAYS"/>
+                                                <PieChart fx:id="gradeChart" legendVisible="false" maxHeight="600.0"
+                                                          maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS"/>
+                                            </children>
+                                            <BorderPane.margin>
+                                                <Insets bottom="10.0" top="10.0"/>
+                                            </BorderPane.margin>
+                                        </VBox>
+                                    </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
