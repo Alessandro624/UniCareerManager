@@ -27,13 +27,6 @@
             <version>21</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.kordamp.ikonli/ikonli-javafx -->
-        <dependency>
-            <groupId>org.kordamp.ikonli</groupId>
-            <artifactId>ikonli-javafx</artifactId>
-            <version>12.3.1</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.kordamp.ikonli/ikonli-materialdesign2-pack -->
         <dependency>
             <groupId>org.kordamp.ikonli</groupId>
@@ -45,6 +38,13 @@
         <dependency>
             <groupId>org.kordamp.ikonli</groupId>
             <artifactId>ikonli-fontawesome5-pack</artifactId>
+            <version>12.3.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.kordamp.ikonli/ikonli-javafx -->
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-javafx</artifactId>
             <version>12.3.1</version>
         </dependency>
 
@@ -75,7 +75,7 @@
             <artifactId>view</artifactId>
             <version>11.12.7</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -112,7 +112,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                it.unical.demacs.informatica.unicareermanager/it.unical.demacs.informatica.unicareermanager.MainApplication
+                                it.unical.demacs.informatica.unicareermanager/it.unical.demacs.informatica.unicareermanager.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
