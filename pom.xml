@@ -112,7 +112,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                it.unical.demacs.informatica.unicareermanager/it.unical.demacs.informatica.unicareermanager.Main
+                                it.unical.demacs.informatica.unicareermanager.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
